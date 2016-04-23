@@ -1,4 +1,4 @@
-name: root
+name: comet
 dependencies:
 - numpy=1.10.4=py35_1
 - openblas=0.2.14=4

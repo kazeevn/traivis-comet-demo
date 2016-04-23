@@ -9,3 +9,9 @@ rule fit_ml:
     shell:
         "runipy COMET\ -\ ML.ipynb"
         
+
+rule fit_ml:
+    input:  "train.csv", "test.csv"
+    output: "manual_score.dat"
+    shell:
+        "runipy COMET\ -\ manual.ipynb"
