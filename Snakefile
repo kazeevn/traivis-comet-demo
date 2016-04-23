@@ -1,3 +1,6 @@
+rule test:
+    input: "ml_score.dat", "manual_score.dat"
+        
 rule get_data_cern:
     output: "train.csv", "test.csv"
     shell:
@@ -9,8 +12,7 @@ rule fit_ml:
     shell:
         "runipy COMET\ -\ ML.ipynb"
         
-
-rule fit_ml:
+rule fit_manual:
     input:  "train.csv", "test.csv"
     output: "manual_score.dat"
     shell:
